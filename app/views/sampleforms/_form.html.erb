@@ -1,0 +1,33 @@
+<%= form_for @sampleform do |f| %>
+
+<p>
+	<%= f.label :firstname %>
+	<%= f.text_field :firstname %>
+</p>
+
+<p>
+	<%= f.label :lastname %>
+	<%= f.text_field :lastname %>
+</p>
+
+<p>
+	<%= f.label :gender %>
+	<%= f.radio_button :gender, 'Male', :checked => true %>Male
+	<%= f.radio_button :gender, 'Female'%>Female
+</p>
+
+<p>
+	<%= f.label :address %>
+	<%= f.text_area :address, :cols => "39", :row=>"7" %>
+</p>
+
+<p>
+	<%= f.label :country %>
+	<%= f.select :country,["VietNam", "USA", "England"]%>
+</p>
+
+<%= f.submit "Submit" %>
+
+<% end %>
+
+<hr></hr>

@@ -1,0 +1,14 @@
+<%= link_to "Create new information", new_sampleform_path %> <br/><hr></hr>
+
+<% @sampleforms.each do |sampleform| %>
+	Firstname: <%= sampleform.firstname %><br/><br/>
+	Lastname: <%= sampleform.lastname %><br/><br/>
+	Gender: <%= sampleform.gender %><br/><br/>
+	Address: <%= sampleform.address %><br/><br/>
+	Country: <%= sampleform.country %><br/><br/>
+
+	<%= link_to "Delete information", sampleform_path(sampleform), :data=>{:confirm=>"Are you sure?"}, :method=> :delete %>
+
+	<br/><hr></hr>
+
+<% end %>
